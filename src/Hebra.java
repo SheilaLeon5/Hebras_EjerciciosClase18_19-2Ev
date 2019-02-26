@@ -12,6 +12,9 @@
  * }
  */
 
+
+
+// ########### extends Thread ##########
 public class Hebra extends Thread {
 	
 	public void run() {
@@ -31,4 +34,9 @@ public class Hebra extends Thread {
 	}
 	
 }
+
+
+// ########### Implements Runnable ##########
+
+
 
