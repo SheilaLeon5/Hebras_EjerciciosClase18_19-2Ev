@@ -11,7 +11,7 @@ public class GreetServer {
     private PrintWriter out;
     private BufferedReader in;
  
-/*    public void start(int port) {
+    public void start(int port) {
     	String greeting = null;
         try {
 			serverSocket = new ServerSocket(port);
@@ -49,28 +49,5 @@ public class GreetServer {
         GreetServer server=new GreetServer();
         server.start(6666);
     }
-}*/
+}
 
-    public class EchoServer {
-        public void start(int port) {
-            try {
-				serverSocket = new ServerSocket(port);
-				clientSocket = serverSocket.accept();
-				out = new PrintWriter(clientSocket.getOutputStream(), true);
-				in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-				 
-				String inputLine;
-				while ((inputLine = in.readLine()) != null) {
-					if (".".equals(inputLine)) {
-						out.println("good bye");
-						break;
-					}	
-				 }
-				 out.println(inputLine);
-			} catch (IOException e) {
-				System.out.println(e.getMessage());
-			}
-        }
-    }
- 
-}    

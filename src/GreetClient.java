@@ -45,13 +45,18 @@ public class GreetClient {
         out.close();
     }
     
-    public static void main(String[] args) { 
-	    GreetClient client = new GreetClient();
-	    client.startConnection("192.168.104.58", 6666);
-	    String response = client.sendMessage("hello server");
-	    System.out.println("CLIENTE: " + response);
-    }       
+	
+	public static void main(String[] args) { 
+		GreetClient client = new
+	 	GreetClient(); client.startConnection("192.168.104.58", 6666); String
+	 	response = client.sendMessage("hello server"); System.out.println("CLIENTE: "+ response);
+	}	 
 }
+
+
+
+
+
 
 
 
